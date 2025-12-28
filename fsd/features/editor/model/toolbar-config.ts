@@ -1,4 +1,6 @@
 import type { Editor } from '@tiptap/react';
+import { createAddLinkItem } from '../ui/AddLinkButton';
+import { createAddImageItem } from '../ui/AddImageItem';
 
 export interface ToolbarConfig {
     icon?: string;
@@ -68,6 +70,9 @@ const structureOptions: ToolbarConfig[] = [
         stateKey: 'isOrderedList',
         text: '번호 목록',
     },
+
+    createAddLinkItem(),
+    createAddImageItem(),
 ];
 
 const alignOptions: ToolbarConfig[] = [

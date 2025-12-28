@@ -1,0 +1,41 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 36px;
+    height: 36px;
+    padding: 0 0.5rem;
+
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background-color: transparent;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151; // gray-700
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+    &:hover:not(:disabled) {
+        background-color: #f3f4f6; // gray-100
+    }
+
+    &:active:not(:disabled) {
+        background-color: #e5e7eb; // gray-200
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    &[data-active='true'] {
+        background-color: #e0e7ff; // indigo-100
+        border-color: #c7d2fe; // indigo-200
+        color: #3730a3; // indigo-800
+    }
+}
